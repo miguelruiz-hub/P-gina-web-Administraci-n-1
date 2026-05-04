@@ -1,189 +1,331 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart Home & Building Tech</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Home & Building Tech</title>
 
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', sans-serif;
-            background: #0a0f1c;
-            color: white;
-            scroll-behavior: smooth;
-        }
+<!-- ICONOS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-        header {
-            background: linear-gradient(90deg, #0f172a, #1e3a8a);
-            padding: 15px 40px;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
+<!-- FUENTE -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins', sans-serif;
+}
 
-        nav a {
-            color: white;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: 500;
-        }
+body{
+background:#0a0f1c;
+color:white;
+scroll-behavior:smooth;
+}
 
-        nav a:hover {
-            color: #38bdf8;
-        }
+/* NAVBAR */
+header{
+position:fixed;
+width:100%;
+top:0;
+background:rgba(10,15,28,0.95);
+backdrop-filter: blur(10px);
+z-index:1000;
+}
 
-        section {
-            padding: 100px 40px;
-        }
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 40px;
+}
 
-        .hero {
-            height: 100vh;
-            background: linear-gradient(to right, #020617, #1e3a8a);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
+nav h2{
+color:#38bdf8;
+}
 
-        .hero h1 {
-            font-size: 3em;
-        }
+nav a{
+color:white;
+text-decoration:none;
+margin:0 15px;
+transition:0.3s;
+}
 
-        .hero p {
-            margin: 20px 0;
-            font-size: 1.2em;
-        }
+nav a:hover{
+color:#38bdf8;
+}
 
-        .btn {
-            background: #38bdf8;
-            padding: 12px 25px;
-            border: none;
-            border-radius: 5px;
-            color: black;
-            cursor: pointer;
-            font-weight: bold;
-        }
+/* HERO */
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+background:linear-gradient(135deg,#020617,#1e3a8a);
+}
 
-        .btn:hover {
-            background: #0ea5e9;
-        }
+.hero h1{
+font-size:3.5em;
+}
 
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
+.hero p{
+margin:20px 0;
+font-size:1.2em;
+color:#cbd5f5;
+}
 
-        .card {
-            background: #111827;
-            padding: 20px;
-            border-radius: 10px;
-            transition: transform 0.3s;
-        }
+.btn{
+background:#38bdf8;
+padding:12px 25px;
+border:none;
+border-radius:30px;
+cursor:pointer;
+font-weight:bold;
+transition:0.3s;
+}
 
-        .card:hover {
-            transform: translateY(-10px);
-        }
+.btn:hover{
+background:#0ea5e9;
+transform:scale(1.05);
+}
 
-        footer {
-            background: #020617;
-            text-align: center;
-            padding: 20px;
-        }
+/* SECCIONES */
+section{
+padding:100px 40px;
+max-width:1200px;
+margin:auto;
+}
 
-        .whatsapp {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: #25D366;
-            padding: 15px;
-            border-radius: 50%;
-            color: white;
-            font-size: 20px;
-        }
-    </style>
+h2{
+text-align:center;
+margin-bottom:40px;
+color:#38bdf8;
+}
+
+/* TARJETAS */
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:#111827;
+padding:25px;
+border-radius:15px;
+transition:0.3s;
+text-align:center;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 20px #38bdf8;
+}
+
+.card i{
+font-size:30px;
+margin-bottom:15px;
+color:#38bdf8;
+}
+
+/* NOSOTROS */
+.about{
+text-align:center;
+color:#cbd5f5;
+line-height:1.6;
+}
+
+/* PROCESO */
+.steps{
+display:flex;
+flex-wrap:wrap;
+justify-content:space-around;
+text-align:center;
+gap:20px;
+}
+
+.step{
+flex:1;
+min-width:200px;
+}
+
+/* CONTACTO */
+.contact{
+text-align:center;
+}
+
+.contact p{
+margin:10px 0;
+}
+
+/* FOOTER */
+footer{
+background:#020617;
+text-align:center;
+padding:20px;
+color:#94a3b8;
+}
+
+/* WHATSAPP */
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+padding:15px;
+border-radius:50%;
+font-size:22px;
+color:white;
+}
+
+/* ANIMACIONES */
+.fade{
+opacity:0;
+transform:translateY(30px);
+transition:1s;
+}
+
+.fade.visible{
+opacity:1;
+transform:translateY(0);
+}
+</style>
 </head>
 
 <body>
 
 <header>
-    <nav>
-        <h2>Smart Tech</h2>
-        <div>
-            <a href="#inicio">Inicio</a>
-            <a href="#servicios">Servicios</a>
-            <a href="#proyectos">Proyectos</a>
-            <a href="#contacto">Contacto</a>
-        </div>
-    </nav>
+<nav>
+<h2>Smart Tech</h2>
+<div>
+<a href="#inicio">Inicio</a>
+<a href="#nosotros">Nosotros</a>
+<a href="#servicios">Servicios</a>
+<a href="#proyectos">Proyectos</a>
+<a href="#contacto">Contacto</a>
+</div>
+</nav>
 </header>
 
+<!-- HERO -->
 <section class="hero" id="inicio">
-    <h1>Smart Home & Building Tech</h1>
-    <p>Tecnología inteligente para espacios eficientes</p>
-    <button class="btn">Solicitar asesoría</button>
+<h1>Smart Home & Building Tech</h1>
+<p>Tecnología inteligente para espacios eficientes</p>
+<button class="btn">Solicitar asesoría</button>
 </section>
 
-<section id="servicios">
-    <h2>Servicios</h2>
-    <div class="cards">
-        <div class="card">
-            <h3>Domótica</h3>
-            <p>Automatización de hogares inteligentes.</p>
-        </div>
-        <div class="card">
-            <h3>Inmótica</h3>
-            <p>Gestión inteligente de edificios.</p>
-        </div>
-        <div class="card">
-            <h3>Automatización Industrial</h3>
-            <p>Optimización de procesos productivos.</p>
-        </div>
-        <div class="card">
-            <h3>Mantenimiento</h3>
-            <p>Soporte técnico especializado.</p>
-        </div>
-    </div>
+<!-- NOSOTROS -->
+<section id="nosotros" class="fade">
+<h2>Nosotros</h2>
+<p class="about">
+Somos una empresa especializada en domótica e inmótica, enfocada en integrar tecnología inteligente en hogares, negocios e industrias. Nuestro objetivo es mejorar la eficiencia, seguridad y confort mediante soluciones innovadoras adaptadas al entorno ecuatoriano.
+</p>
 </section>
 
-<section id="proyectos">
-    <h2>Proyectos</h2>
-    <div class="cards">
-        <div class="card">
-            <h3>Casa Inteligente</h3>
-            <p>Control de iluminación y seguridad automatizada.</p>
-        </div>
-        <div class="card">
-            <h3>Edificio Comercial</h3>
-            <p>Sistema centralizado de energía y climatización.</p>
-        </div>
-        <div class="card">
-            <h3>Industria Automatizada</h3>
-            <p>Control y monitoreo de procesos en tiempo real.</p>
-        </div>
-    </div>
+<!-- SERVICIOS -->
+<section id="servicios" class="fade">
+<h2>Servicios</h2>
+<div class="cards">
+<div class="card">
+<i class="fas fa-house"></i>
+<h3>Domótica</h3>
+<p>Automatización residencial inteligente.</p>
+</div>
+<div class="card">
+<i class="fas fa-building"></i>
+<h3>Inmótica</h3>
+<p>Gestión eficiente de edificios.</p>
+</div>
+<div class="card">
+<i class="fas fa-industry"></i>
+<h3>Automatización Industrial</h3>
+<p>Optimización de procesos productivos.</p>
+</div>
+<div class="card">
+<i class="fas fa-tools"></i>
+<h3>Mantenimiento</h3>
+<p>Soporte técnico especializado.</p>
+</div>
+</div>
 </section>
 
-<section id="contacto">
-    <h2>Contacto</h2>
-    <p>Email: contacto@smarthome-tech.com</p>
-    <p>Teléfono: +593 999 999 999</p>
+<!-- PROCESO -->
+<section class="fade">
+<h2>Nuestro Proceso</h2>
+<div class="steps">
+<div class="step">
+<h3>Diagnóstico</h3>
+<p>Evaluamos necesidades del cliente.</p>
+</div>
+<div class="step">
+<h3>Diseño</h3>
+<p>Desarrollamos soluciones personalizadas.</p>
+</div>
+<div class="step">
+<h3>Implementación</h3>
+<p>Instalación y configuración del sistema.</p>
+</div>
+<div class="step">
+<h3>Soporte</h3>
+<p>Mantenimiento continuo.</p>
+</div>
+</div>
+</section>
+
+<!-- PROYECTOS -->
+<section id="proyectos" class="fade">
+<h2>Proyectos</h2>
+<div class="cards">
+<div class="card">
+<h3>Casa Inteligente</h3>
+<p>Control automatizado de iluminación y seguridad.</p>
+</div>
+<div class="card">
+<h3>Edificio Comercial</h3>
+<p>Gestión energética y climatización.</p>
+</div>
+<div class="card">
+<h3>Industria 4.0</h3>
+<p>Monitoreo y control en tiempo real.</p>
+</div>
+</div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto" class="fade">
+<h2>Contacto</h2>
+<div class="contact">
+<p><i class="fas fa-envelope"></i> contacto@smarthome-tech.com</p>
+<p><i class="fas fa-phone"></i> +593 999 999 999</p>
+<p><i class="fas fa-map-marker-alt"></i> Quito, Ecuador</p>
+</div>
 </section>
 
 <footer>
-    <p>© 2026 Smart Home & Building Tech S.A.S.</p>
+<p>© 2026 Smart Home & Building Tech S.A.S.</p>
 </footer>
 
-<a href="#" class="whatsapp">💬</a>
+<a href="#" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+
+<!-- ANIMACIONES JS -->
+<script>
+const elements = document.querySelectorAll('.fade');
+
+window.addEventListener('scroll', () => {
+elements.forEach(el => {
+const position = el.getBoundingClientRect().top;
+const screen = window.innerHeight;
+
+if(position < screen - 100){
+el.classList.add('visible');
+}
+});
+});
+</script>
 
 </body>
 </html>

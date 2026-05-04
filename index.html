@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Home & Building Tech</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: #0a0f1c;
+            color: white;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            background: linear-gradient(90deg, #0f172a, #1e3a8a);
+            padding: 15px 40px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: #38bdf8;
+        }
+
+        section {
+            padding: 100px 40px;
+        }
+
+        .hero {
+            height: 100vh;
+            background: linear-gradient(to right, #020617, #1e3a8a);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+        }
+
+        .hero p {
+            margin: 20px 0;
+            font-size: 1.2em;
+        }
+
+        .btn {
+            background: #38bdf8;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            color: black;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background: #0ea5e9;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: #111827;
+            padding: 20px;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        footer {
+            background: #020617;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .whatsapp {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #25D366;
+            padding: 15px;
+            border-radius: 50%;
+            color: white;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <h2>Smart Tech</h2>
+        <div>
+            <a href="#inicio">Inicio</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#proyectos">Proyectos</a>
+            <a href="#contacto">Contacto</a>
+        </div>
+    </nav>
+</header>
+
+<section class="hero" id="inicio">
+    <h1>Smart Home & Building Tech</h1>
+    <p>Tecnología inteligente para espacios eficientes</p>
+    <button class="btn">Solicitar asesoría</button>
+</section>
+
+<section id="servicios">
+    <h2>Servicios</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>Domótica</h3>
+            <p>Automatización de hogares inteligentes.</p>
+        </div>
+        <div class="card">
+            <h3>Inmótica</h3>
+            <p>Gestión inteligente de edificios.</p>
+        </div>
+        <div class="card">
+            <h3>Automatización Industrial</h3>
+            <p>Optimización de procesos productivos.</p>
+        </div>
+        <div class="card">
+            <h3>Mantenimiento</h3>
+            <p>Soporte técnico especializado.</p>
+        </div>
+    </div>
+</section>
+
+<section id="proyectos">
+    <h2>Proyectos</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>Casa Inteligente</h3>
+            <p>Control de iluminación y seguridad automatizada.</p>
+        </div>
+        <div class="card">
+            <h3>Edificio Comercial</h3>
+            <p>Sistema centralizado de energía y climatización.</p>
+        </div>
+        <div class="card">
+            <h3>Industria Automatizada</h3>
+            <p>Control y monitoreo de procesos en tiempo real.</p>
+        </div>
+    </div>
+</section>
+
+<section id="contacto">
+    <h2>Contacto</h2>
+    <p>Email: contacto@smarthome-tech.com</p>
+    <p>Teléfono: +593 999 999 999</p>
+</section>
+
+<footer>
+    <p>© 2026 Smart Home & Building Tech S.A.S.</p>
+</footer>
+
+<a href="#" class="whatsapp">💬</a>
+
+</body>
+</html>
